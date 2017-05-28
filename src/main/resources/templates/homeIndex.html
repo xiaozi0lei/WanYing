@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>WanYing</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+    <form action="/preview" method="post" target="_blank">
+        <div class="form-group">
+            <label for="text-input">安静的书写</label>
+            <textarea id="text-input" name="text-input" class="form-control" rows="20" placeholder="享受安静的思绪"></textarea>
+        </div>
+        <input type="submit" class="btn btn-default" value="预览" />
+
+        <!--<a id="preview" href="/preview" class="btn btn-default" role="button" target="_blank">预览</a>-->
+    </form>
+
+</div>
+
+<div layout:fragment="rightSideBar">
+</div>
+
+<section layout:fragment="jscript">
+    <script>
+//        $("#preview").click(function () {
+//            var text_input = $("#text-input").val();
+//
+//            $.ajax({
+//                url: "/preview",
+//                data: {
+//                    text_input: text_input
+//                },
+//                success: function (data) {
+//
+//                },
+//                error: function () {
+//                    alert("异常！");
+//                }
+//            });
+//        });
+    </script>
+</section>
+
+</body>
+</html>

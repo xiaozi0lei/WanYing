@@ -1,0 +1,36 @@
+group 'cn.yingnote'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.1.2'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Vert.x 框架，基于 Netty，事件和异步
+    compile 'io.vertx:vertx-web:3.4.1'
+    // thymeleaf template engine
+    compile 'io.vertx:vertx-web-templ-thymeleaf:3.4.1'
+    // kotlin jvm standard lib
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    // slf4j logback
+    compile 'ch.qos.logback:logback-classic:1.2.2'
+    // thymeleaf layout
+    compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.2.2'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{/layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <div id="content1">hello</div>
+</div>
+
+<section layout:fragment="jscript">
+    <script th:inline="javascript">
+        $(document).ready(function() {
+            var markedText = marked([[${context.get('text_input')}]]);
+//            alert(text);
+            $("#content1").html(markedText);
+        });
+    </script>
+</section>
+
+</body>
+</html>

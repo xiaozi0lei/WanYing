@@ -1,0 +1,17 @@
+/target/
+/lib
+/apps/
+.idea
+.settings/
+.project
+.classpath
+*.jpg
+/output
+/out
+.gradle
+build
+/bak
+/classes
+.DS_Store
+upload/
+.vertx
