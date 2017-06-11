@@ -29,6 +29,8 @@ dependencies {
     compile 'ch.qos.logback:logback-classic:1.2.2'
     // thymeleaf layout
     compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.2.2'
+    // junit testing framework
+    testCompile 'junit:junit:4.12'
 }
 
 compileKotlin {
